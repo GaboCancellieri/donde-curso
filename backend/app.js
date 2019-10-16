@@ -9,7 +9,6 @@ mongoose.set('useCreateIndex', true);
 mongoose.connect("mongodb://localhost:27017/dondeCurso", { useNewUrlParser: true, useUnifiedTopology: true });
 
 var carreraRoutes = require('./routes/carrera');
-var claseRoutes = require('./routes/clase');
 var edificioRoutes = require('./routes/edificio');
 var materiaRoutes = require('./routes/materia');
 var moduloRoutes = require('./routes/modulo');
@@ -62,7 +61,6 @@ app.use(bodyParser.urlencoded({
 app.use(auth.initialize());
 
 app.use('/carrera', carreraRoutes);
-app.use('/clase', claseRoutes);
 app.use('/edificio', edificioRoutes);
 app.use('/materia', materiaRoutes);
 app.use('/modulo', moduloRoutes);

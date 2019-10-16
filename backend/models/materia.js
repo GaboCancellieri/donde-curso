@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 var materiaSchema = new Schema({
     _id: String,
     nombre: String,
-    añoPlanEstudio: Number,
+    añoCarrera: Number,
 });
 
 var Materia = mongoose.model('Materia', materiaSchema);

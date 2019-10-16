@@ -4,6 +4,7 @@ var Schema = mongoose.Schema;
 
 var sitioSchema = new Schema({
     _id: String,
+    nombre: String,
     latitud: String,
     longitud: String,
     piso: Number,

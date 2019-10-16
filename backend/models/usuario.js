@@ -9,6 +9,8 @@ var usuarioSchema = new Schema({
     nombre: String,
     apellido: String,
     mail: String,
+    modulos: [{type: Schema.Types.ObjectId, ref: 'Modulo'}],
+    carreras: [{type: Schema.Types.ObjectId, ref: 'Carrera'}],
 });
 
 usuarioSchema.index({ username: 1 });
