@@ -101,7 +101,7 @@ function postMateria(req, res) {
     nuevaMateria = new Materia({
         nombre: req.body.nombre,
         añoCarrera: req.body.añoCarrera,
-    })
+    });
 
     nuevaMateria.save((materiaGuardada) => {
         res.status(200).json({

@@ -27,6 +27,8 @@ function getCarreras(req, res) {
 
 function getCarrera(req, res) {
     Carrera.findById(req.params.idCarrera)
+        .populate('materias')
+        .populate({path: 'unidadAcademica', model: 'UnidadAcademica'})
         .exec((error, carrera) => {
             if (error) {
                 return res.status(404).json({

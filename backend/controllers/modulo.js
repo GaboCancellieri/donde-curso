@@ -3,7 +3,8 @@ var Usuario = require('../models/usuario');
 
 function getModulos(req, res) {
     Modulo.find({'materia': req.params.idMateria})
-        .populate('materia')
+        .populate({path: 'materia', model: "Materia"})
+        .populate('clases.sitio')
         .exec((error, modulos) => {
             if (error) {
                 return res.status(404).json({

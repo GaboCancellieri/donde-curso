@@ -27,6 +27,7 @@ function getEdificios(req, res) {
 
 function getEdificio(req, res) {
     Edificio.findById(req.params.idEdificio)
+        .populate('sitios')
         .exec((error, edificio) => {
             if (error) {
                 return res.status(404).json({

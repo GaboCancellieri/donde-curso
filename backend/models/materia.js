@@ -3,9 +3,8 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var materiaSchema = new Schema({
-    _id: String,
     nombre: String,
-    añoCarrera: Number,
+    añoCarrera: String,
 });
 
 var Materia = mongoose.model('Materia', materiaSchema);

@@ -3,7 +3,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var Clase = new Schema({
-    _id: String,
     dia: String,
     horaInicio: Number,
     duracion: Number,
@@ -13,9 +12,8 @@ var Clase = new Schema({
 
 
 var moduloSchema = new Schema({
-    _id: String,
     nombre: String,
-    añoAcademico: Number,
+    añoAcademico: String,
     materia: {type: Schema.Types.ObjectId, ref: 'Materia'},
     clases: [Clase]
 });

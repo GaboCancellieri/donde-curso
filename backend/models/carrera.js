@@ -3,10 +3,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var carreraSchema = new Schema({
-    _id: String,
     nombre: String,
     unidadAcademica: {type: Schema.Types.ObjectId, ref: 'UnidadAcademica'},
-    materias: [{type: Schema.Types.ObjectId, ref: 'Materias'}]
+    materias: [{type: Schema.Types.ObjectId, ref: 'Materia'}]
 });
 
 var Carrera = mongoose.model('Carrera', carreraSchema);

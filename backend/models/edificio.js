@@ -3,7 +3,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var edificioSchema = new Schema({
-    _id: String,
     nombre: String,
     descripcion: String,
     sitios: [{type: Schema.Types.ObjectId, ref: 'Sitio'}],

@@ -27,6 +27,7 @@ function getUnidadAcademicas(req, res) {
 
 function getUnidadAcademica(req, res) {
     UnidadAcademica.findById(req.params.idUnidadAcademica)
+        .populate('edificios')
         .exec((error, unidadAcademica) => {
             if (error) {
                 return res.status(404).json({

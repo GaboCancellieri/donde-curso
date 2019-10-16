@@ -16,6 +16,12 @@ var sitioRoutes = require('./routes/sitio');
 var unidadAcademicaRoutes = require('./routes/unidadAcademica');
 
 var Usuario = require('./models/usuario');
+var Carrera = require('./models/carrera');
+var Edificio = require('./models/edificio');
+var Materia = require('./models/materia');
+var Modulo = require('./models/modulo');
+var Sitio = require('./models/sitio');
+var UnidadAcademica = require('./models/unidadAcademica');
 
 express = require('express');
 bodyParser = require('body-parser');
@@ -60,12 +66,12 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(auth.initialize());
 
-app.use('/carrera', carreraRoutes);
-app.use('/edificio', edificioRoutes);
-app.use('/materia', materiaRoutes);
-app.use('/modulo', moduloRoutes);
-app.use('/sitio', sitioRoutes);
-app.use('/unidadAcademica', unidadAcademicaRoutes);
+app.use('/api/carreras', carreraRoutes);
+app.use('/api/edificios', edificioRoutes);
+app.use('/api/materias', materiaRoutes);
+app.use('/api/modulos', moduloRoutes);
+app.use('/api/sitios', sitioRoutes);
+app.use('/api/unidadAcademicas', unidadAcademicaRoutes);
 
 //#########################################################
 //            INDEX RENDER PARA ANGULAR2
